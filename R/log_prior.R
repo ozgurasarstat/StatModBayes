@@ -7,7 +7,7 @@
      out <- dmvnorm(x = as.numeric(beta), mean = param_beta$mu, sigma = param_beta$Sigma, log = TRUE)
    }else if(model %in% c("logistic", "poisson")){
      out <- dmvnorm(x = beta, mean = param_beta$mu, sigma = param_beta$Sigma, log = TRUE) +
-       d_inv_gamma(x =sigmasq_inv, phi = param_sigmasq_inv$phi, delta = param_sigmasq_inv$delta, log = TRUE)
+       d_inv_gamma(x = sigmasq_inv, phi = param_sigmasq_inv$phi, delta = param_sigmasq_inv$delta, log = TRUE)
    }
 
    return(out)
